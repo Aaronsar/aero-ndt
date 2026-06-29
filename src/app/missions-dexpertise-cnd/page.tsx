@@ -4,8 +4,10 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { AnimateIn } from "@/components/animate-in";
 import { CtaBanner } from "@/components/cta-banner";
+import { IconBadge } from "@/components/icon-badge";
 import { PageBanner } from "@/components/page-banner";
 import { SectionHeader } from "@/components/section-header";
+import { prestationIcons } from "@/lib/icons";
 import { expertiseService, images } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -61,16 +63,8 @@ export default function MissionsExpertisePage() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {expertiseService.prestations.map((prestation, i) => (
               <AnimateIn key={prestation.title} delay={i * 70}>
-                <article className="card card-hover flex h-full flex-col items-center p-6 text-center">
-                  <div className="mb-4 flex h-24 w-full items-center justify-center rounded-xl bg-primary-light">
-                    <Image
-                      src={prestation.image}
-                      alt=""
-                      width={90}
-                      height={90}
-                      className="max-h-20 w-auto object-contain"
-                    />
-                  </div>
+                <article className="card card-hover group flex h-full flex-col items-center p-6 text-center">
+                  <IconBadge icon={prestationIcons[prestation.icon]} size="md" className="mb-4" />
                   <h3 className="font-bold text-heading">{prestation.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
                     {prestation.description}

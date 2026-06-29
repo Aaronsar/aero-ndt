@@ -1,4 +1,4 @@
-import { ArrowRight, Shield } from "lucide-react";
+import { ArrowRight, BadgeCheck } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { images, siteConfig } from "@/lib/site-config";
@@ -9,7 +9,7 @@ export function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
         <div className="animate-fade-up">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-white/80 px-4 py-2 text-sm font-medium text-primary shadow-sm backdrop-blur">
-            <Shield className="h-4 w-4" />
+            <BadgeCheck className="h-4 w-4" strokeWidth={1.5} />
             Certification FrANDTB — Aéronautique
           </div>
 

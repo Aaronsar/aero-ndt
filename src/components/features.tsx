@@ -1,6 +1,7 @@
-import Image from "next/image";
 import { AnimateIn } from "@/components/animate-in";
+import { IconBadge } from "@/components/icon-badge";
 import { SectionHeader } from "@/components/section-header";
+import { featureIcons } from "@/lib/icons";
 import { features } from "@/lib/site-config";
 
 export function Features() {
@@ -22,15 +23,7 @@ export function Features() {
             <AnimateIn key={feature.title} delay={i * 80}>
               <article className="card card-hover group relative flex h-full flex-col items-center overflow-hidden p-8 text-center">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-accent opacity-0 transition group-hover:opacity-100" />
-                <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-2xl bg-primary-light transition group-hover:scale-110">
-                  <Image
-                    src={feature.icon}
-                    alt=""
-                    width={56}
-                    height={56}
-                    className="h-14 w-14 object-contain"
-                  />
-                </div>
+                <IconBadge icon={featureIcons[feature.icon]} size="lg" className="mb-5" />
                 <h3 className="text-lg font-bold text-heading">{feature.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
                   {feature.description}

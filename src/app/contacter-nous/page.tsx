@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { AnimateIn } from "@/components/animate-in";
 import { ContactForm } from "@/components/contact-form";
+import { IconBadge } from "@/components/icon-badge";
 import { PageBanner } from "@/components/page-banner";
 import { contactPage } from "@/lib/site-config";
 
@@ -28,9 +29,7 @@ export default function ContactPage() {
 
                 <div className="mt-8 space-y-4">
                   <div className="card flex items-start gap-4 p-5">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-light">
-                      <MapPin className="h-5 w-5 text-primary" />
-                    </div>
+                    <IconBadge icon={MapPin} size="sm" />
                     <div>
                       <p className="text-sm font-medium text-slate-500">Adresse</p>
                       <p className="mt-1 font-medium text-heading">
@@ -42,7 +41,7 @@ export default function ContactPage() {
                   {contactPage.contacts.map((contact) => (
                     <div key={contact.email} className="card p-5">
                       <div className="flex items-center gap-3">
-                        <Phone className="h-4 w-4 text-primary" />
+                        <IconBadge icon={Phone} size="sm" />
                         <a
                           href={`tel:${contact.phone.replace(/\s/g, "")}`}
                           className="font-medium text-heading hover:text-primary"
@@ -50,8 +49,8 @@ export default function ContactPage() {
                           {contact.phone}
                         </a>
                       </div>
-                      <div className="mt-2 flex items-center gap-3">
-                        <Mail className="h-4 w-4 text-primary" />
+                      <div className="mt-3 flex items-center gap-3">
+                        <IconBadge icon={Mail} size="sm" />
                         <a
                           href={`mailto:${contact.email}`}
                           className="font-medium text-heading hover:text-primary"

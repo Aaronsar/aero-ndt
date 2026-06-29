@@ -1,5 +1,6 @@
-import Image from "next/image";
 import { AnimateIn } from "@/components/animate-in";
+import { IconBadge } from "@/components/icon-badge";
+import { featureIcons } from "@/lib/icons";
 import { features } from "@/lib/site-config";
 
 export function FeaturesGrid() {
@@ -9,16 +10,8 @@ export function FeaturesGrid() {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
             <AnimateIn key={feature.title} delay={i * 70}>
-              <article className="card card-hover flex flex-col items-center p-8 text-center">
-                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-primary-light">
-                  <Image
-                    src={feature.icon}
-                    alt=""
-                    width={48}
-                    height={48}
-                    className="h-12 w-12 object-contain"
-                  />
-                </div>
+              <article className="card card-hover group flex flex-col items-center p-8 text-center">
+                <IconBadge icon={featureIcons[feature.icon]} size="md" className="mb-4" />
                 <h3 className="font-bold text-heading">{feature.title}</h3>
                 <p className="mt-2 text-sm text-slate-600">{feature.description}</p>
               </article>

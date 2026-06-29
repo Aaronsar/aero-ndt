@@ -17,25 +17,6 @@ export const images = {
   serviceExpertiseHome: "/images/service-expertise.png",
   serviceProductionPage: "/images/service-production-page.png",
   expertiseHero: "/images/expertise-hero.png",
-  icons: {
-    expertise: "/images/icon-expertise.png",
-    economie: "/images/icon-economie.png",
-    flexibilite: "/images/icon-flexibilite.png",
-    disponibilite: "/images/icon-disponibilite.png",
-  },
-  values: {
-    qualite: "/images/value-qualite.png",
-    service: "/images/value-service.png",
-    adaptabilite: "/images/value-adaptabilite.png",
-    savoirEtre: "/images/value-savoir-etre.png",
-    ethique: "/images/value-ethique.png",
-  },
-  prestations: {
-    niveau3: "/images/prestation-niveau3.png",
-    moyenCnd: "/images/prestation-moyen-cnd.png",
-    audit: "/images/prestation-audit.png",
-    analyse: "/images/prestation-analyse.png",
-  },
 };
 
 export const navLinks = [
@@ -57,22 +38,22 @@ export const features = [
   {
     title: "Expertise",
     description: "Des contrôleurs formés et expérimentés.",
-    icon: images.icons.expertise,
+    icon: "expertise" as const,
   },
   {
     title: "Economie",
     description: "Gain sur vos coûts de recrutement, de formation, de turnover.",
-    icon: images.icons.economie,
+    icon: "economie" as const,
   },
   {
     title: "Flexibilité",
     description: "Nous nous adaptons à vos besoins. ",
-    icon: images.icons.flexibilite,
+    icon: "flexibilite" as const,
   },
   {
     title: "Disponibilité",
     description: "Votre agenda est notre priorité.",
-    icon: images.icons.disponibilite,
+    icon: "disponibilite" as const,
   },
 ];
 
@@ -96,30 +77,30 @@ export const values = [
     title: "Qualité",
     description:
       "Nous nous conformerons aux normes du CND tout en tenant compte de vos exigences particulières pour répondre pleinement à vos besoins.",
-    image: images.values.qualite,
+    icon: "qualite" as const,
   },
   {
     title: "Service",
     description:
       "Répondre à vos besoins dans vos délais en proposant le dispositif le plus efficient et le plus économique.",
-    image: images.values.service,
+    icon: "service" as const,
   },
   {
     title: "Adaptabilité",
     description: "Vous évoluez dans vos besoins nous construirons la solution  avec vous.",
-    image: images.values.adaptabilite,
+    icon: "adaptabilite" as const,
   },
   {
     title: "Savoir-être",
     description:
       "Nos collaborateurs sauront s'intégrer à votre environnement industriel en parfaite autonomie.",
-    image: images.values.savoirEtre,
+    icon: "savoirEtre" as const,
   },
   {
     title: "Ethique",
     description:
       "Nous effectuerons les contrôles en toute impartialité, en respectant les réglementations et spécifications.",
-    image: images.values.ethique,
+    icon: "ethique" as const,
   },
 ];
 
@@ -158,25 +139,25 @@ export const expertiseService = {
     {
       title: "Niveau 3 Responsable",
       description: "Nous portons pour vous la responsabilité des activités réglementaires.",
-      image: images.prestations.niveau3,
+      icon: "niveau3" as const,
     },
     {
       title: "Moyen CND",
       description:
         "Nous assumons pour vous la qualification de tout ou partie de vos processus et moyens CND.",
-      image: images.prestations.moyenCnd,
+      icon: "moyenCnd" as const,
     },
     {
       title: "Audit",
       description:
         "Nous préparons pour vous l'audit de qualification client ou de certification PRI Nadcap.",
-      image: images.prestations.audit,
+      icon: "audit" as const,
     },
     {
       title: "Analyse",
       description:
         "Nous analysons et préconisons pour vous des optimisations de vos processus CND.",
-      image: images.prestations.analyse,
+      icon: "analyse" as const,
     },
   ],
 };

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { IconBadge } from "@/components/icon-badge";
 import { contactPage, navLinks, siteConfig } from "@/lib/site-config";
 
 export function Footer() {
@@ -66,25 +67,25 @@ export function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-wider text-white">
               Contact
             </h3>
-            <ul className="mt-4 space-y-3 text-sm">
-              <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                {contactPage.address}
+            <ul className="mt-4 space-y-4 text-sm">
+              <li className="flex items-start gap-3">
+                <IconBadge icon={MapPin} size="sm" variant="dark" />
+                <span className="pt-2">{contactPage.address}</span>
               </li>
               {contactPage.contacts.map((c) => (
-                <li key={c.email}>
+                <li key={c.email} className="space-y-2">
                   <a
                     href={`tel:${c.phone.replace(/\s/g, "")}`}
-                    className="flex items-center gap-2 transition hover:text-white"
+                    className="flex items-center gap-3 transition hover:text-white"
                   >
-                    <Phone className="h-4 w-4 shrink-0 text-primary" />
+                    <IconBadge icon={Phone} size="sm" variant="dark" />
                     {c.phone}
                   </a>
                   <a
                     href={`mailto:${c.email}`}
-                    className="mt-1 flex items-center gap-2 transition hover:text-white"
+                    className="flex items-center gap-3 transition hover:text-white"
                   >
-                    <Mail className="h-4 w-4 shrink-0 text-primary" />
+                    <IconBadge icon={Mail} size="sm" variant="dark" />
                     {c.email}
                   </a>
                 </li>

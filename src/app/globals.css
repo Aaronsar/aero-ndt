@@ -81,6 +81,37 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-2px);
 }
 
+/* Icon badges */
+.icon-badge {
+  background: linear-gradient(
+    145deg,
+    rgba(4, 107, 210, 0.14) 0%,
+    rgba(56, 189, 248, 0.08) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 8px rgba(4, 107, 210, 0.1);
+  border: 1px solid rgba(4, 107, 210, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.group:hover .icon-badge {
+  transform: scale(1.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 6px 16px rgba(4, 107, 210, 0.18);
+}
+
+.icon-badge-dark {
+  background: linear-gradient(
+    145deg,
+    rgba(56, 189, 248, 0.18) 0%,
+    rgba(4, 107, 210, 0.1) 100%
+  );
+  border-color: rgba(56, 189, 248, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
 /* Typography */
 .section-label {
   display: inline-block;
