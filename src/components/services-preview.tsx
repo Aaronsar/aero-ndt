@@ -28,11 +28,18 @@ export function ServicesPreview() {
                     className="object-cover transition duration-500 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-heading/80 to-transparent" />
+                  <div
+                    className="absolute inset-0 bg-black/25 transition group-hover:bg-black/35"
+                    aria-hidden
+                  />
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-black/95 via-black/70 to-transparent"
+                    aria-hidden
+                  />
                   <div className="absolute bottom-0 p-6 sm:p-8">
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    <p className="mt-2 text-sm text-blue-100">{service.description}</p>
-                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white">
+                    <h3 className="text-xl font-bold text-white drop-shadow-sm">{service.title}</h3>
+                    <p className="mt-2 text-sm text-white/90 drop-shadow-sm">{service.description}</p>
+                    <span className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white drop-shadow-sm">
                       En savoir plus <ArrowRight className="h-4 w-4" />
                     </span>
                   </div>

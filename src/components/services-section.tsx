@@ -28,15 +28,22 @@ export function ServicesSection() {
                     className="object-cover transition duration-500 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-heading/80 via-heading/20 to-transparent" />
+                  <div
+                    className="absolute inset-0 bg-black/25 transition group-hover:bg-black/35"
+                    aria-hidden
+                  />
+                  <div
+                    className="absolute inset-x-0 bottom-0 h-[70%] bg-gradient-to-t from-black/95 via-black/70 to-transparent"
+                    aria-hidden
+                  />
                   <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-                    <h3 className="text-xl font-bold text-white sm:text-2xl">
+                    <h3 className="text-xl font-bold text-white drop-shadow-sm sm:text-2xl">
                       {service.title}
                     </h3>
-                    <p className="mt-2 text-sm text-blue-100 sm:text-base">
+                    <p className="mt-2 text-sm text-white/90 drop-shadow-sm sm:text-base">
                       {service.description}
                     </p>
-                    <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white transition group-hover:gap-3">
+                    <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white drop-shadow-sm transition group-hover:gap-3">
                       En savoir plus
                       <ArrowRight className="h-4 w-4" />
                     </span>
