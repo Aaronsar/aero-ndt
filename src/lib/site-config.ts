@@ -202,32 +202,128 @@ export const productionService = {
 export const expertiseService = {
   title: "Missions d'expertise CND",
   subtitle: "Nous vous proposons des missions variées d'expertise CND",
+  bannerDescription:
+    "Expertise CND niveau 3, qualification de moyens, audits et optimisation de vos processus pour la filière aéronautique.",
   intro:
     "Nous garantissons la conformité de l'environnement de contrôle à la réglementation et à vos exigences. L'offre AERO NDT s'adapte à votre organisation, sous forme de délégation ou d'accompagnement pour optimiser vos processus NDT.",
+  paragraphs: [
+    "Nous garantissons la conformité de l'environnement de contrôle à la réglementation et à vos exigences.",
+    "L'offre AERO NDT s'adapte à votre organisation, sous forme de délégation ou d'accompagnement pour optimiser vos processus NDT.",
+    "Nos experts niveau 3 certifiés FrANDTB interviennent sur l'ensemble de la chaîne CND : responsabilité réglementaire, qualification des moyens, préparation aux audits et amélioration continue.",
+  ],
+  highlights: [
+    "Experts niveau 3 certifiés FrANDTB",
+    "Responsabilité réglementaire déléguée ou accompagnée",
+    "Qualification de vos processus et moyens CND",
+    "Préparation aux audits PRI Nadcap et qualification client",
+  ],
+  processTitle: "Notre méthodologie",
+  processDescription:
+    "Une approche structurée pour sécuriser votre organisation CND et garantir la conformité de vos activités.",
+  process: [
+    {
+      title: "Diagnostic",
+      description:
+        "Évaluation de votre organisation CND, de vos procédures et identification des écarts réglementaires.",
+      icon: "diagnostic" as const,
+    },
+    {
+      title: "Proposition sur mesure",
+      description:
+        "Définition du dispositif adapté : délégation complète ou accompagnement de vos équipes internes.",
+      icon: "proposition" as const,
+    },
+    {
+      title: "Mise en œuvre",
+      description:
+        "Déploiement de l'expertise niveau 3 : validation des procédures, qualification des moyens et supervision.",
+      icon: "deployment" as const,
+    },
+    {
+      title: "Suivi & amélioration",
+      description:
+        "Accompagnement continu, analyse des performances et préconisations d'optimisation de vos processus.",
+      icon: "suivi" as const,
+    },
+  ],
+  modesTitle: "Deux modes d'intervention",
+  modesDescription:
+    "Choisissez la formule la plus adaptée à la maturité de votre organisation CND et à vos objectifs industriels.",
+  modes: [
+    {
+      title: "Délégation",
+      description:
+        "AERO NDT porte pour vous la responsabilité réglementaire de vos activités CND. Idéal pour sécuriser rapidement votre conformité.",
+      icon: "delegation" as const,
+    },
+    {
+      title: "Accompagnement",
+      description:
+        "Nous co-pilotons avec vos équipes pour optimiser vos processus NDT et renforcer vos compétences internes.",
+      icon: "accompagnement" as const,
+    },
+  ],
   prestationsTitle: "Nos prestations",
+  prestationsDescription:
+    "Des missions d'expertise couvrant l'ensemble du spectre réglementaire et opérationnel du contrôle non destructif.",
   prestations: [
     {
       title: "Niveau 3 Responsable",
       description: "Nous portons pour vous la responsabilité des activités réglementaires.",
+      detail:
+        "Pilotage réglementaire, validation des procédures, supervision des contrôleurs et interface avec vos clients.",
       icon: "niveau3" as const,
     },
     {
       title: "Moyen CND",
       description:
         "Nous assumons pour vous la qualification de tout ou partie de vos processus et moyens CND.",
+      detail:
+        "Qualification des équipements, rédaction et validation des instructions de travail et dossiers de preuve.",
       icon: "moyenCnd" as const,
     },
     {
       title: "Audit",
       description:
         "Nous préparons pour vous l'audit de qualification client ou de certification PRI Nadcap.",
+      detail:
+        "Revue documentaire, pré-audit interne et accompagnement le jour J pour maximiser vos chances de succès.",
       icon: "audit" as const,
     },
     {
       title: "Analyse",
       description:
         "Nous analysons et préconisons pour vous des optimisations de vos processus CND.",
+      detail:
+        "Audit de performance, analyse des non-conformités et plan d'actions pour améliorer votre efficacité.",
       icon: "analyse" as const,
+    },
+  ],
+  benefitsTitle: "Ce que vous gagnez",
+  benefits: [
+    {
+      title: "Conformité",
+      description:
+        "Un environnement de contrôle aligné sur la réglementation EN4179, FrANDTB et vos exigences clients.",
+      icon: "conformite" as const,
+    },
+    {
+      title: "Sérénité",
+      description:
+        "La responsabilité réglementaire est portée par des experts niveau 3 expérimentés de la filière aéronautique.",
+      icon: "serenite" as const,
+    },
+    {
+      title: "Performance",
+      description:
+        "Des processus CND optimisés pour réduire les non-conformités et améliorer votre efficacité opérationnelle.",
+      icon: "performance" as const,
+    },
+    {
+      title: "Certification",
+      description:
+        "Une préparation rigoureuse aux audits Nadcap et aux qualifications clients pour sécuriser vos accès marché.",
+      icon: "certification" as const,
     },
   ],
 };
