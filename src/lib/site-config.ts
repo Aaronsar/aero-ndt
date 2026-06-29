@@ -67,9 +67,68 @@ export const homeAbout = {
 };
 
 export const aboutPage = {
+  bannerDescription:
+    "Pure player du Contrôle Non Destructif, exclusivement dédié à la filière aéronautique et certifié EN9100.",
+  storyTitle: "Pure player Aéronautique",
+  paragraphs: [
+    "AERO NDT a émergé en réponse à une demande pressante sur le marché des contrôleurs certifiés FrANDTB.",
+    "Fondée avec l'ambition de satisfaire les besoins en Contrôle Non Destructif (CND) de la filière aéronautique à des tarifs compétitifs, notre entreprise vise également à croître en formant de nouveaux collaborateurs.",
+    "Exclusivement tournée vers l'aéronautique, nous intervenons en contrôle en production comme en missions d'expertise CND niveau 3, en nous adaptant à l'organisation de chacun de nos clients.",
+  ],
+  highlights: [
+    "100 % dédié à la filière aéronautique",
+    "Contrôleurs et experts certifiés FrANDTB",
+    "Organisation certifiée EN9100",
+    "Formation et développement de nouveaux talents CND",
+  ],
   certificationTitle: "Certifié EN9100",
+  certificationDescription:
+    "Notre engagement qualité garantit la rigueur de notre organisation et la conformité de nos prestations.",
   certificationText:
-    "Nous nous engageons à ce que notre organisation réponde  aux exigences de la norme EN4179 et aux exigences spécifiques de la certification FrANDTB .",
+    "Nous nous engageons à ce que notre organisation réponde aux exigences de la norme EN4179 et aux exigences spécifiques de la certification FrANDTB.",
+  certifications: [
+    {
+      title: "EN9100",
+      description:
+        "Système de management de la qualité aéronautique, garantissant la rigueur et la traçabilité de notre organisation.",
+      icon: "en9100" as const,
+    },
+    {
+      title: "EN4179",
+      description:
+        "Norme internationale de référence pour la certification et la compétence du personnel CND en aéronautique.",
+      icon: "en4179" as const,
+    },
+    {
+      title: "FrANDTB",
+      description:
+        "Certification française du personnel CND, exigée par les donneurs d'ordre de la filière aéronautique nationale.",
+      icon: "frandtb" as const,
+    },
+  ],
+  commitmentTitle: "Notre engagement",
+  commitmentDescription:
+    "Une promesse simple : apporter à nos clients aéronautiques la qualité, la réactivité et l'expertise CND qu'ils attendent.",
+  commitments: [
+    {
+      title: "Exclusivité aéronautique",
+      description:
+        "Nous ne travaillons que pour la filière aéronautique, ce qui garantit une expertise pointue et une parfaite connaissance des exigences sectorielles.",
+      icon: "aeronautique" as const,
+    },
+    {
+      title: "Conformité réglementaire",
+      description:
+        "Chaque prestation respecte les normes EN4179, la certification FrANDTB et les exigences spécifiques de vos clients.",
+      icon: "en4179" as const,
+    },
+    {
+      title: "Qualité certifiée",
+      description:
+        "Notre système de management qualité EN9100 structure l'ensemble de nos processus pour une exécution fiable et traçable.",
+      icon: "en9100" as const,
+    },
+  ],
 };
 
 export const values = [

@@ -1,5 +1,6 @@
 import {
   Award,
+  BadgeCheck,
   CalendarCheck,
   CircleDollarSign,
   ClipboardCheck,
@@ -10,6 +11,7 @@ import {
   Handshake,
   HeartHandshake,
   LineChart,
+  Plane,
   Puzzle,
   RefreshCw,
   Scale,
@@ -68,8 +70,16 @@ export const expertiseIcons = {
   certification: ClipboardCheck,
 } as const satisfies Record<string, LucideIcon>;
 
+export const aboutIcons = {
+  en9100: Award,
+  en4179: ShieldCheck,
+  frandtb: BadgeCheck,
+  aeronautique: Plane,
+} as const satisfies Record<string, LucideIcon>;
+
 export type FeatureIconKey = keyof typeof featureIcons;
 export type ValueIconKey = keyof typeof valueIcons;
 export type PrestationIconKey = keyof typeof prestationIcons;
 export type ProductionIconKey = keyof typeof productionIcons;
 export type ExpertiseIconKey = keyof typeof expertiseIcons;
+export type AboutIconKey = keyof typeof aboutIcons;
