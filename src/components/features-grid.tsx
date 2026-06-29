@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { features } from "@/lib/site-config";
 
-export function Features() {
+export function FeaturesGrid() {
   return (
     <section className="bg-[#f0f5fa] py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">

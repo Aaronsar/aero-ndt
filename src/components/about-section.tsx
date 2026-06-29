@@ -1,52 +1,38 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Plane } from "lucide-react";
+import { homeAbout, images } from "@/lib/site-config";
 
 export function AboutSection() {
   return (
-    <section className="relative overflow-hidden py-24">
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-sky-950/20 to-transparent" />
-
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          <div className="relative">
-            <div className="glass aspect-[4/3] overflow-hidden rounded-3xl">
-              <div className="flex h-full flex-col items-center justify-center bg-gradient-to-br from-slate-900 via-sky-950 to-blue-950 p-12">
-                <div className="animate-float">
-                  <Plane className="h-24 w-24 -rotate-45 text-sky-500/40" />
-                </div>
-                <p className="mt-6 text-center text-sm uppercase tracking-[0.3em] text-sky-400/60">
-                  Pure player Aéronautique
-                </p>
-              </div>
-            </div>
-            <div className="absolute -bottom-4 -right-4 h-32 w-32 rounded-2xl bg-sky-500/10 blur-2xl" />
+    <section className="py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <Image
+              src={images.aboutIllustration}
+              alt=""
+              width={703}
+              height={531}
+              className="h-auto w-full rounded-lg"
+            />
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-widest text-sky-400">
-              À propos
-            </p>
-            <h2 className="mt-3 text-3xl font-bold text-white sm:text-4xl">
-              Pure player Aéronautique
-            </h2>
-            <div className="mt-6 space-y-4 text-slate-400 leading-relaxed">
+            <h2 className="section-title text-2xl sm:text-3xl">{homeAbout.title}</h2>
+            <div className="mt-5 space-y-4 text-slate-600 leading-relaxed">
+              <p>{homeAbout.paragraphs[0]}</p>
               <p>
-                AERO NDT a émergé en réponse à une demande pressante sur le marché des
-                contrôleurs certifiés FrANDTB.
-              </p>
-              <p>
-                Fondée avec l&apos;ambition de satisfaire les besoins en Contrôle Non
-                Destructif (CND) de la filière aéronautique à des tarifs compétitifs,
-                notre entreprise vise également à croître en formant de nouveaux
-                collaborateurs.
+                Fondée avec l&apos;ambition de satisfaire les besoins en{" "}
+                <strong className="font-semibold text-[#1e293b]">
+                  Contrôle Non Destructif
+                </strong>{" "}
+                (<strong className="font-semibold text-[#1e293b]"> CND </strong>) de la
+                filière aéronautique à des tarifs compétitifs, notre entreprise vise
+                également à croître en formant de nouveaux collaborateurs.
               </p>
             </div>
-            <Link
-              href="/a-propos"
-              className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-sky-400 transition hover:text-sky-300"
-            >
+            <Link href="/a-propos" className="btn-primary mt-8">
               En savoir plus
-              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

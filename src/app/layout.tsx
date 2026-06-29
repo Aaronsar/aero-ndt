@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Rubik } from "next/font/google";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { siteConfig } from "@/lib/site-config";
+import { images, siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const rubik = Rubik({
+  variable: "--font-rubik",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -17,6 +18,10 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   metadataBase: new URL(siteConfig.url),
+  icons: {
+    icon: images.favicon,
+    apple: images.favicon,
+  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
@@ -33,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={`${inter.variable} h-full scroll-smooth antialiased`}>
-      <body className="min-h-full flex flex-col bg-[#030712] text-slate-100">
+    <html lang="fr" className={`${rubik.variable} h-full scroll-smooth antialiased`}>
+      <body className="min-h-full flex flex-col bg-white text-slate-600">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

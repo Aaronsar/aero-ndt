@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { servicesPreview } from "@/lib/site-config";
 
-export function ServicesSection() {
+export function ServicesPreview() {
   return (
-    <section className="bg-white py-16 sm:py-20">
+    <section className="py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <h2 className="section-title mb-12 text-center text-2xl sm:text-3xl">
           Nos services CND
