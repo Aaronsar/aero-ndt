@@ -90,10 +90,10 @@ export default function MissionsExpertisePage() {
             />
           </AnimateIn>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cards gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {expertiseService.process.map((step, i) => (
               <AnimateIn key={step.title} delay={i * 70}>
-                <article className="card card-hover group relative flex h-full flex-col p-6">
+                <article className="card card-hover card-panel group relative p-6 sm:p-8">
                   <span className="text-4xl font-bold text-primary/15">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -103,7 +103,7 @@ export default function MissionsExpertisePage() {
                     className="absolute right-6 top-6"
                   />
                   <h3 className="mt-4 font-bold text-heading">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  <p className="card-panel-text mt-2 text-sm leading-relaxed text-slate-600">
                     {step.description}
                   </p>
                 </article>
@@ -123,12 +123,12 @@ export default function MissionsExpertisePage() {
             />
           </AnimateIn>
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-2">
+          <div className="mt-14 grid grid-cards gap-6 lg:grid-cols-2">
             {expertiseService.modes.map((mode, i) => (
               <AnimateIn key={mode.title} delay={i * 80}>
-                <article className="card card-hover flex h-full gap-5 p-8">
+                <article className="card card-hover card-panel card-panel-row gap-5 p-6 sm:p-8">
                   <IconBadge icon={expertiseIcons[mode.icon]} size="md" className="shrink-0" />
-                  <div>
+                  <div className="card-panel-text flex min-w-0 flex-col">
                     <h3 className="text-lg font-bold text-heading">{mode.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-slate-600">
                       {mode.description}
@@ -151,10 +151,10 @@ export default function MissionsExpertisePage() {
             />
           </AnimateIn>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cards gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {expertiseService.prestations.map((prestation, i) => (
               <AnimateIn key={prestation.title} delay={i * 70}>
-                <article className="card card-hover group flex h-full flex-col p-6">
+                <article className="card card-hover card-panel p-6 sm:p-8">
                   <IconBadge
                     icon={prestationIcons[prestation.icon]}
                     size="md"
@@ -164,7 +164,7 @@ export default function MissionsExpertisePage() {
                   <p className="mt-2 text-sm font-medium text-primary">
                     {prestation.description}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  <p className="card-panel-text mt-3 text-sm leading-relaxed text-slate-600">
                     {prestation.detail}
                   </p>
                 </article>
@@ -180,13 +180,13 @@ export default function MissionsExpertisePage() {
             <SectionHeader label="Avantages" title={expertiseService.benefitsTitle} />
           </AnimateIn>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cards gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {expertiseService.benefits.map((benefit, i) => (
               <AnimateIn key={benefit.title} delay={i * 70}>
-                <article className="card card-hover group flex h-full flex-col items-center p-6 text-center">
+                <article className="card card-hover card-panel card-panel-centered p-6 sm:p-8">
                   <IconBadge icon={expertiseIcons[benefit.icon]} size="md" className="mb-4" />
                   <h3 className="font-bold text-heading">{benefit.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  <p className="card-panel-text mt-2 text-sm leading-relaxed text-slate-600">
                     {benefit.description}
                   </p>
                 </article>

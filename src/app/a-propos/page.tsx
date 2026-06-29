@@ -88,13 +88,13 @@ export default function AboutPage() {
             />
           </AnimateIn>
 
-          <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          <div className="mt-14 grid grid-cards gap-6 lg:grid-cols-3">
             {aboutPage.certifications.map((cert, i) => (
               <AnimateIn key={cert.title} delay={i * 70}>
-                <article className="card card-hover group flex h-full flex-col p-8 text-center">
-                  <IconBadge icon={aboutIcons[cert.icon]} size="md" className="mx-auto mb-5" />
+                <article className="card card-hover card-panel card-panel-centered p-6 sm:p-8">
+                  <IconBadge icon={aboutIcons[cert.icon]} size="md" className="mx-auto mb-4" />
                   <h3 className="text-lg font-bold text-heading">{cert.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-600">
+                  <p className="card-panel-text mt-3 text-sm leading-relaxed text-slate-600">
                     {cert.description}
                   </p>
                 </article>
@@ -120,12 +120,12 @@ export default function AboutPage() {
             />
           </AnimateIn>
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-3">
+          <div className="mt-14 grid grid-cards gap-6 lg:grid-cols-3">
             {aboutPage.commitments.map((commitment, i) => (
               <AnimateIn key={commitment.title} delay={i * 80}>
-                <article className="card card-hover flex h-full gap-5 p-8">
+                <article className="card card-hover card-panel card-panel-row gap-5 p-6 sm:p-8">
                   <IconBadge icon={aboutIcons[commitment.icon]} size="md" className="shrink-0" />
-                  <div>
+                  <div className="card-panel-text flex min-w-0 flex-col">
                     <h3 className="text-lg font-bold text-heading">{commitment.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-slate-600">
                       {commitment.description}

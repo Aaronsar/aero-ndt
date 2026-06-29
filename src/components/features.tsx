@@ -18,14 +18,14 @@ export function Features() {
           />
         </AnimateIn>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cards gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
             <AnimateIn key={feature.title} delay={i * 80}>
-              <article className="card card-hover group relative flex h-full flex-col items-center overflow-hidden p-8 text-center">
+              <article className="card card-hover card-panel card-panel-centered group relative overflow-hidden p-6 sm:p-8">
                 <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-accent opacity-0 transition group-hover:opacity-100" />
-                <IconBadge icon={featureIcons[feature.icon]} size="lg" className="mb-5" />
-                <h3 className="text-lg font-bold text-heading">{feature.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <IconBadge icon={featureIcons[feature.icon]} size="md" className="mb-4" />
+                <h3 className="font-bold text-heading">{feature.title}</h3>
+                <p className="card-panel-text mt-2 text-sm leading-relaxed text-slate-600">
                   {feature.description}
                 </p>
               </article>

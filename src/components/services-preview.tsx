@@ -13,12 +13,12 @@ export function ServicesPreview() {
           <SectionHeader label="Prestations" title="Nos services CND" />
         </AnimateIn>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-2">
+        <div className="mt-14 grid grid-cards gap-6 lg:grid-cols-2">
           {servicesPreview.map((service, i) => (
             <AnimateIn key={service.title} delay={i * 100}>
               <Link
                 href={service.href}
-                className="card card-hover group block overflow-hidden"
+                className="card card-hover card-panel group block h-full overflow-hidden"
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <Image

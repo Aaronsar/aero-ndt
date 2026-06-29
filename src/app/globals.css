@@ -150,6 +150,38 @@ body {
   border-color: rgba(4, 107, 210, 0.2);
 }
 
+/* Equal-height card grids */
+.grid-cards {
+  align-items: stretch;
+}
+
+.grid-cards > .animate-in {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.card-panel {
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+}
+
+.card-panel-centered {
+  align-items: center;
+  text-align: center;
+}
+
+.card-panel-row {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.card-panel-text {
+  flex: 1;
+}
+
 /* Hero background */
 .hero-bg {
   background:

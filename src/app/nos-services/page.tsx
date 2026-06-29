@@ -90,10 +90,10 @@ export default function NosServicesPage() {
             />
           </AnimateIn>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cards gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {productionService.process.map((step, i) => (
               <AnimateIn key={step.title} delay={i * 70}>
-                <article className="card card-hover group relative flex h-full flex-col p-6">
+                <article className="card card-hover card-panel group relative p-6 sm:p-8">
                   <span className="text-4xl font-bold text-primary/15">
                     {String(i + 1).padStart(2, "0")}
                   </span>
@@ -103,7 +103,7 @@ export default function NosServicesPage() {
                     className="absolute right-6 top-6"
                   />
                   <h3 className="mt-4 font-bold text-heading">{step.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  <p className="card-panel-text mt-2 text-sm leading-relaxed text-slate-600">
                     {step.description}
                   </p>
                 </article>
@@ -155,13 +155,13 @@ export default function NosServicesPage() {
             <SectionHeader label="Avantages" title={productionService.benefitsTitle} />
           </AnimateIn>
 
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cards gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {productionService.benefits.map((benefit, i) => (
               <AnimateIn key={benefit.title} delay={i * 70}>
-                <article className="card card-hover group flex h-full flex-col items-center p-6 text-center">
+                <article className="card card-hover card-panel card-panel-centered p-6 sm:p-8">
                   <IconBadge icon={productionIcons[benefit.icon]} size="md" className="mb-4" />
                   <h3 className="font-bold text-heading">{benefit.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  <p className="card-panel-text mt-2 text-sm leading-relaxed text-slate-600">
                     {benefit.description}
                   </p>
                 </article>

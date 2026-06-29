@@ -12,13 +12,13 @@ export function ValueCards() {
           <SectionHeader label="Engagement" title="Nos valeurs" />
         </AnimateIn>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-14 grid grid-cards gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {values.map((value, i) => (
             <AnimateIn key={value.title} delay={i * 60}>
-              <article className="card card-hover group flex h-full flex-col items-center p-6 text-center">
+              <article className="card card-hover card-panel card-panel-centered p-6 sm:p-8">
                 <IconBadge icon={valueIcons[value.icon]} size="md" className="mb-4" />
                 <h3 className="font-bold text-heading">{value.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                <p className="card-panel-text mt-2 text-sm leading-relaxed text-slate-600">
                   {value.description}
                 </p>
               </article>
