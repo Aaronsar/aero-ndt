@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { AnimateIn } from "@/components/animate-in";
+import { PageBanner } from "@/components/page-banner";
 import { legalPage, siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -9,26 +11,22 @@ export const metadata: Metadata = {
 export default function LegalPage() {
   return (
     <>
-      <section className="bg-[#f0f5fa] py-12 sm:py-16">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <h1 className="text-3xl font-semibold text-[#1e293b] sm:text-4xl">
-            Mentions légales &amp; CGV
-          </h1>
-        </div>
-      </section>
+      <PageBanner title="Mentions légales & CGV" />
 
-      <section className="py-16 sm:py-20">
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
-          <div className="space-y-10">
-            {legalPage.sections.map((section) => (
-              <div key={section.title}>
-                <h2 className="text-xl font-semibold text-[#1e293b]">{section.title}</h2>
-                <div className="mt-4 space-y-3 text-slate-600 leading-relaxed">
-                  {section.paragraphs.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
+          <div className="space-y-8">
+            {legalPage.sections.map((section, i) => (
+              <AnimateIn key={section.title} delay={i * 50}>
+                <div className="card p-8">
+                  <h2 className="text-xl font-bold text-heading">{section.title}</h2>
+                  <div className="mt-4 space-y-3 leading-relaxed text-slate-600">
+                    {section.paragraphs.map((paragraph) => (
+                      <p key={paragraph}>{paragraph}</p>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              </AnimateIn>
             ))}
           </div>
         </div>

@@ -1,32 +1,35 @@
 import Image from "next/image";
+import { AnimateIn } from "@/components/animate-in";
+import { SectionHeader } from "@/components/section-header";
 import { values } from "@/lib/site-config";
 
 export function ValueCards() {
   return (
-    <section className="bg-[#f0f5fa] py-16 sm:py-20">
+    <section className="bg-surface py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <h2 className="section-title mb-12 text-center text-2xl sm:text-3xl">
-          Nos valeurs
-        </h2>
+        <AnimateIn>
+          <SectionHeader label="Engagement" title="Nos valeurs" />
+        </AnimateIn>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-          {values.map((value) => (
-            <article
-              key={value.title}
-              className="card flex flex-col items-center p-6 text-center"
-            >
-              <Image
-                src={value.image}
-                alt=""
-                width={120}
-                height={120}
-                className="mb-4 h-24 w-auto object-contain"
-              />
-              <h3 className="text-lg font-semibold text-[#1e293b]">{value.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                {value.description}
-              </p>
-            </article>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          {values.map((value, i) => (
+            <AnimateIn key={value.title} delay={i * 60}>
+              <article className="card card-hover flex h-full flex-col items-center p-6 text-center">
+                <div className="mb-4 flex h-24 w-full items-center justify-center">
+                  <Image
+                    src={value.image}
+                    alt=""
+                    width={100}
+                    height={100}
+                    className="max-h-20 w-auto object-contain"
+                  />
+                </div>
+                <h3 className="font-bold text-heading">{value.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  {value.description}
+                </p>
+              </article>
+            </AnimateIn>
           ))}
         </div>
       </div>

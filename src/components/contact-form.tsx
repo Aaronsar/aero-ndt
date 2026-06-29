@@ -4,10 +4,11 @@ export function ContactForm() {
   const fields = contactPage.formFields;
 
   return (
-    <form className="card p-8">
-      <div className="space-y-5">
+    <form className="card p-8 shadow-lg shadow-slate-200/50 sm:p-10">
+      <h3 className="text-lg font-bold text-heading">Formulaire de contact</h3>
+      <div className="mt-6 space-y-5">
         <div>
-          <label htmlFor="name" className="block text-sm text-slate-600">
+          <label htmlFor="name" className="block text-sm font-medium text-slate-600">
             {fields.name} <span className="text-red-500">*</span>
           </label>
           <input
@@ -15,24 +16,24 @@ export function ContactForm() {
             name="name"
             type="text"
             required
-            className="mt-1.5 w-full rounded border border-slate-300 px-4 py-3 text-sm outline-none focus:border-[#046bd2] focus:ring-1 focus:ring-[#046bd2]"
+            className="mt-1.5 w-full rounded-xl border border-slate-200 bg-surface/50 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
 
         <div>
-          <label htmlFor="phone" className="block text-sm text-slate-600">
+          <label htmlFor="phone" className="block text-sm font-medium text-slate-600">
             {fields.phone}
           </label>
           <input
             id="phone"
             name="phone"
             type="tel"
-            className="mt-1.5 w-full rounded border border-slate-300 px-4 py-3 text-sm outline-none focus:border-[#046bd2] focus:ring-1 focus:ring-[#046bd2]"
+            className="mt-1.5 w-full rounded-xl border border-slate-200 bg-surface/50 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm text-slate-600">
+          <label htmlFor="email" className="block text-sm font-medium text-slate-600">
             {fields.email} <span className="text-red-500">*</span>
           </label>
           <input
@@ -40,24 +41,24 @@ export function ContactForm() {
             name="email"
             type="email"
             required
-            className="mt-1.5 w-full rounded border border-slate-300 px-4 py-3 text-sm outline-none focus:border-[#046bd2] focus:ring-1 focus:ring-[#046bd2]"
+            className="mt-1.5 w-full rounded-xl border border-slate-200 bg-surface/50 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
 
         <div>
-          <label htmlFor="company" className="block text-sm text-slate-600">
+          <label htmlFor="company" className="block text-sm font-medium text-slate-600">
             {fields.company}
           </label>
           <input
             id="company"
             name="company"
             type="text"
-            className="mt-1.5 w-full rounded border border-slate-300 px-4 py-3 text-sm outline-none focus:border-[#046bd2] focus:ring-1 focus:ring-[#046bd2]"
+            className="mt-1.5 w-full rounded-xl border border-slate-200 bg-surface/50 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
 
         <div>
-          <label htmlFor="subject" className="block text-sm text-slate-600">
+          <label htmlFor="subject" className="block text-sm font-medium text-slate-600">
             {fields.subject} <span className="text-red-500">*</span>
           </label>
           <input
@@ -65,24 +66,24 @@ export function ContactForm() {
             name="subject"
             type="text"
             required
-            className="mt-1.5 w-full rounded border border-slate-300 px-4 py-3 text-sm outline-none focus:border-[#046bd2] focus:ring-1 focus:ring-[#046bd2]"
+            className="mt-1.5 w-full rounded-xl border border-slate-200 bg-surface/50 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
 
         <div>
-          <label htmlFor="file" className="block text-sm text-slate-600">
+          <label htmlFor="file" className="block text-sm font-medium text-slate-600">
             {fields.file}
           </label>
           <input
             id="file"
             name="file"
             type="file"
-            className="mt-1.5 w-full rounded border border-slate-300 px-4 py-3 text-sm outline-none file:mr-4 file:rounded file:border-0 file:bg-[#f0f5fa] file:px-4 file:py-2 file:text-sm file:text-[#1e293b]"
+            className="mt-1.5 w-full rounded-xl border border-dashed border-slate-300 bg-surface/50 px-4 py-3 text-sm file:mr-3 file:rounded-lg file:border-0 file:bg-primary file:px-4 file:py-1.5 file:text-sm file:font-medium file:text-white"
           />
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm text-slate-600">
+          <label htmlFor="message" className="block text-sm font-medium text-slate-600">
             {fields.message} <span className="text-red-500">*</span>
           </label>
           <textarea
@@ -90,7 +91,7 @@ export function ContactForm() {
             name="message"
             rows={5}
             required
-            className="mt-1.5 w-full resize-none rounded border border-slate-300 px-4 py-3 text-sm outline-none focus:border-[#046bd2] focus:ring-1 focus:ring-[#046bd2]"
+            className="mt-1.5 w-full resize-none rounded-xl border border-slate-200 bg-surface/50 px-4 py-3 text-sm outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/20"
           />
         </div>
 

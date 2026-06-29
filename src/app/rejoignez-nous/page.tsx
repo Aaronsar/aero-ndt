@@ -1,4 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { Users } from "lucide-react";
+import { AnimateIn } from "@/components/animate-in";
+import { CtaBanner } from "@/components/cta-banner";
+import { PageBanner } from "@/components/page-banner";
 import { careers } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -9,16 +14,30 @@ export const metadata: Metadata = {
 export default function CareersPage() {
   return (
     <>
-      <section className="bg-white py-16 sm:py-24">
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-          <h1 className="text-3xl font-semibold text-[#1e293b] sm:text-4xl">
-            {careers.title}
-          </h1>
-          <h2 className="mx-auto mt-8 max-w-3xl text-xl font-semibold text-[#1e293b] sm:text-2xl">
-            {careers.subtitle}
-          </h2>
+      <PageBanner title={careers.title} description={careers.subtitle} />
+
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
+          <AnimateIn>
+            <div className="card mx-auto max-w-xl p-10 text-center">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-light">
+                <Users className="h-8 w-8 text-primary" />
+              </div>
+              <h2 className="text-xl font-bold text-heading sm:text-2xl">
+                {careers.subtitle}
+              </h2>
+              <p className="mt-4 text-slate-600">
+                Envoyez-nous votre candidature via notre formulaire de contact.
+              </p>
+              <Link href="/contacter-nous" className="btn-primary mt-8">
+                Postuler
+              </Link>
+            </div>
+          </AnimateIn>
         </div>
       </section>
+
+      <CtaBanner />
     </>
   );
 }

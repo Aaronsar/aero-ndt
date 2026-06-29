@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { AnimateIn } from "@/components/animate-in";
 import { ContactForm } from "@/components/contact-form";
+import { PageBanner } from "@/components/page-banner";
 import { contactPage } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -10,52 +13,61 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-white pt-12 pb-8 sm:pt-16">
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
-          <h1 className="text-3xl font-semibold text-[#1e293b] sm:text-4xl">
-            {contactPage.introTitle}
-          </h1>
-        </div>
-      </section>
+      <PageBanner
+        title={contactPage.introTitle}
+        description={contactPage.formDescription}
+      />
 
-      <section className="pb-16 sm:py-20">
+      <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr]">
-            <div>
-              <h2 className="section-title text-2xl">{contactPage.formTitle}</h2>
-              <p className="mt-4 text-slate-600 leading-relaxed">
-                {contactPage.formDescription}
-              </p>
+          <div className="grid gap-12 lg:grid-cols-[1fr_1.15fr]">
+            <AnimateIn>
+              <div>
+                <span className="section-label">Coordonnées</span>
+                <h2 className="section-title mt-2">{contactPage.formTitle}</h2>
 
-              <div className="mt-8 space-y-6">
-                <div className="card p-5">
-                  <p className="text-slate-600">{contactPage.address}</p>
-                </div>
-
-                {contactPage.contacts.map((contact) => (
-                  <div key={contact.email} className="card space-y-2 p-5">
-                    <p>
-                      <a
-                        href={`tel:${contact.phone.replace(/\s/g, "")}`}
-                        className="text-[#1e293b] hover:text-[#046bd2]"
-                      >
-                        {contact.phone}
-                      </a>
-                    </p>
-                    <p>
-                      <a
-                        href={`mailto:${contact.email}`}
-                        className="text-[#1e293b] hover:text-[#046bd2]"
-                      >
-                        {contact.email}
-                      </a>
-                    </p>
+                <div className="mt-8 space-y-4">
+                  <div className="card flex items-start gap-4 p-5">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary-light">
+                      <MapPin className="h-5 w-5 text-primary" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-slate-500">Adresse</p>
+                      <p className="mt-1 font-medium text-heading">
+                        {contactPage.address}
+                      </p>
+                    </div>
                   </div>
-                ))}
-              </div>
-            </div>
 
-            <ContactForm />
+                  {contactPage.contacts.map((contact) => (
+                    <div key={contact.email} className="card p-5">
+                      <div className="flex items-center gap-3">
+                        <Phone className="h-4 w-4 text-primary" />
+                        <a
+                          href={`tel:${contact.phone.replace(/\s/g, "")}`}
+                          className="font-medium text-heading hover:text-primary"
+                        >
+                          {contact.phone}
+                        </a>
+                      </div>
+                      <div className="mt-2 flex items-center gap-3">
+                        <Mail className="h-4 w-4 text-primary" />
+                        <a
+                          href={`mailto:${contact.email}`}
+                          className="font-medium text-heading hover:text-primary"
+                        >
+                          {contact.email}
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </AnimateIn>
+
+            <AnimateIn delay={120}>
+              <ContactForm />
+            </AnimateIn>
           </div>
         </div>
       </section>
