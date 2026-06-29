@@ -122,10 +122,80 @@ export const servicesPreview = [
 export const productionService = {
   title: "Contrôle en production",
   subtitle: "Nous contrôlons vos pièces",
+  bannerDescription:
+    "Mise à disposition de contrôleurs certifiés FrANDTB directement sur votre ligne de production aéronautique.",
   paragraphs: [
     "Le contrôle non destructif fait partie intégrante de vos processus de production afin d'assurer la  conformité et donc la qualité de votre production !",
     "Nos contrôleurs certifiés FrANDTB toute technique et méthode CND interviendront sur vos moyens, sous votre responsabilité, en réponse au besoin structurel ou conjoncturel de votre atelier.",
     "Vous bénéficierez ainsi d'une capacité de contrôle compétente, flexible et adaptable garantissant le respect de livraison des pièces à vos clients.",
+  ],
+  highlights: [
+    "Contrôleurs certifiés FrANDTB, toutes techniques CND",
+    "Intervention sur vos moyens, sous votre responsabilité",
+    "Réponse aux besoins structurels et conjoncturels",
+    "Capacité flexible pour respecter vos délais de livraison",
+  ],
+  techniquesTitle: "Techniques & méthodes CND",
+  techniquesDescription:
+    "Nos équipes maîtrisent l'ensemble des méthodes reconnues par la filière aéronautique, conformément à la norme EN4179.",
+  techniques: [
+    { code: "UT", name: "Ultrasons" },
+    { code: "RT", name: "Radiographie" },
+    { code: "PT", name: "Ressuage" },
+    { code: "MT", name: "Magnétoscopie" },
+    { code: "ET", name: "Courants de Foucault" },
+  ],
+  processTitle: "Notre approche",
+  processDescription:
+    "Un dispositif pensé pour s'intégrer à votre organisation industrielle, sans rupture dans votre flux de production.",
+  process: [
+    {
+      title: "Analyse du besoin",
+      description:
+        "Compréhension de votre flux de production, de vos exigences qualité et de vos contraintes de délai.",
+      icon: "analyse" as const,
+    },
+    {
+      title: "Intégration atelier",
+      description:
+        "Mise à disposition de contrôleurs qualifiés, formés à votre environnement et à vos procédures.",
+      icon: "integration" as const,
+    },
+    {
+      title: "Exécution CND",
+      description:
+        "Réalisation des contrôles sur vos moyens, dans le respect de vos instructions et de la réglementation.",
+      icon: "execution" as const,
+    },
+    {
+      title: "Continuité & flexibilité",
+      description:
+        "Ajustement de la capacité selon votre charge atelier, pour garantir la continuité de vos livraisons.",
+      icon: "continuite" as const,
+    },
+  ],
+  benefitsTitle: "Ce que vous gagnez",
+  benefits: [
+    {
+      title: "Flexibilité",
+      description: "Adaptez la capacité de contrôle à la charge de votre atelier, sans contrainte RH.",
+      icon: "flexibilite" as const,
+    },
+    {
+      title: "Économie",
+      description: "Réduisez vos coûts de recrutement, de formation et de turnover de contrôleurs.",
+      icon: "economie" as const,
+    },
+    {
+      title: "Qualité",
+      description: "Conformité aux exigences EN4179 et certification FrANDTB, dans le respect de vos standards.",
+      icon: "qualite" as const,
+    },
+    {
+      title: "Réactivité",
+      description: "Intervention rapide sur vos lignes pour répondre à vos pics d'activité et urgences clients.",
+      icon: "reactivite" as const,
+    },
   ],
 };
 
