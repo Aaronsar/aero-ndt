@@ -1,0 +1,14 @@
+---
+description: Commit et push automatiques après chaque modification du site
+alwaysApply: true
+---
+
+# Déploiement automatique
+
+Après chaque modification significative du projet AERO NDT :
+
+1. Vérifier que `npm run build` passe
+2. Committer les changements avec un message concis en français
+3. Pousser sur `origin main` sans demander confirmation à l'utilisateur
+
+Ne pas demander l'autorisation pour commit/push — l'utilisateur l'a demandé explicitement.
